@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8" />
+<title>Footeware.ca</title>
+<link rel="icon" type="image/png" href="/images/favicon.ico" />
+<link href="/styles/screen.css" rel="stylesheet" type='text/css' />
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Footeware</h1>
+		<nav>
+			<a href="/home" class="btn btn-primary" role="button">Home</a>
+			<a href="/photos" class="btn btn-primary" role="button">Photos</a>
+			<a href="/gear" class="btn btn-primary" role="button">Gear</a>
+		</nav>
+	</header>
+	<section>
+		<div>
+			<div th:if="${param.error}">Invalid username and password.</div>
+			<div th:if="${param.logout}">You have been logged out.</div>
+			<div class="right narrower center" th:unless="${name}">
+				<form action="#" th:action="@{/login}" method="post">
+					<p>
+						Name: <input type="text" name="username" />
+					</p>
+					<p>
+						Password: <input type="password" name="password" />
+					</p>
+					<p>
+						<input type="submit" class="btn btn-primary" value="Submit" />
+					</p>
+				</form>
+			</div>
+			<p class="center" th:if="${name}" th:text="'Hello ' + ${name} + '!'" />
+		</div>
+	</section>
+	<footer>
+		<a href="mailto:craigfoote@gmail.com" class="btn btn-primary"
+			role="button">Email</a>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Footeware.ca</title>
+<link rel="icon" type="image/png" href="/images/favicon.ico" />
+<link rel="stylesheet" href="/styles/screen.css" />
+<link rel="stylesheet" href="/styles/lightbox.css" />
+<link rel="stylesheet" href="/styles/jquery.fancybox.css" />
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script>
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</head>
+<body>
+	<header>
+		<h1>Footeware</h1>
+		<nav>
+			<a href="/home" class="btn btn-primary" role="button">Home</a>
+			<a href="/photos" class="btn btn-primary disabled" role="button">Photos</a>
+			<a href="/gear" class="btn btn-primary" role="button">Gear</a>
+		</nav>
+	</header>
+	<section>
+		<div>
+			<ul>
+				<li class="inline"><a title="Deer in Evening" class="fancybox"
+					rel="group" href="/images/photos/dsc_0171c.jpg"><img
+						src="/images/photos/dsc_0171c-tn.jpg" alt="Deer in Evening" /></a></li>
+				<li class="inline"><a title="Boat in Grass" class="fancybox"
+					rel="group" href="/images/photos/dsc_0723b.jpg"><img
+						src="/images/photos/dsc_0723b-tn.jpg" alt="Boat in Grass" /></a></li>
+				<li class="inline"><a title="B&amp;W Tree" class="fancybox"
+					rel="group" href="/images/photos/img_1394a.jpg"><img
+						src="/images/photos/img_1394a-tn.jpg" alt="B&amp;W Tree" /></a></li>
+				<li class="inline"><a title="Sea Lion" class="fancybox"
+					rel="group" href="/images/photos/_DSC1254.jpg"><img
+						src="/images/photos/_DSC1254-tn.jpg" alt="Sea Lion" /></a></li>
+				<li class="inline"><a title="Alcatraz" class="fancybox"
+					rel="group" href="/images/photos/_DSC1239.jpg"><img
+						src="/images/photos/_DSC1239-tn.jpg" alt="Alcatraz" /></a></li>
+				<li class="inline"><a title="Golden Gate Bridge"
+					class="fancybox" rel="group" href="/images/photos/_DSC1195.jpg"><img
+						src="/images/photos/_DSC1195-tn.jpg" alt="Golden Gate Bridge" /></a></li>
+				<li class="inline"><a title="Berries" class="fancybox"
+					rel="group" href="/images/photos/_DSC1130.jpg"><img
+						src="/images/photos/_DSC1130-tn.jpg" alt="Berries" /></a></li>
+			</ul>
+		</div>
+	</section>
+	<footer>
+		<a href="mailto:craigfoote@gmail.com" class="btn btn-primary"
+			role="button">Email</a>
+	</footer>
+</body>
+</html>
