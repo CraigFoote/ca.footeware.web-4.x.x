@@ -67,7 +67,7 @@ section>div {
 }
 
 section>div ul{
-	padding: 5px 40px 5px 40px;
+	padding: 5px 50px 5px 70px;
 }
 
 section>div a {
@@ -83,7 +83,6 @@ section>div a:visited {
 }
 
 img {
-	border: 2px solid black;
 	margin: 5px;
 }
 
@@ -116,7 +115,6 @@ p {
 
 .left {
 	text-align: left;
-	'
 }
 
 .float-right {

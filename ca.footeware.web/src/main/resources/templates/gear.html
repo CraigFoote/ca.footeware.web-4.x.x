@@ -4,13 +4,21 @@
 <meta charset="UTF-8" />
 <title>Footeware.ca</title>
 <link rel="icon" type="image/png" href="/images/favicon.ico" />
-<link href="/styles/screen.css" rel="stylesheet" type='text/css' />
+<link rel="stylesheet" href="/styles/screen.css" />
+<link rel="stylesheet" href="/styles/lightbox.css" />
+<link rel="stylesheet" href="/styles/jquery.fancybox.css" />
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script>
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
 </head>
 <body>
 	<header>
@@ -19,13 +27,15 @@
 			<a href="/home" class="btn btn-primary" role="button">Home</a> <a
 				href="/photos" class="btn btn-primary" role="button">Photos</a> <a
 				href="/gear" class="btn btn-primary disabled" role="button">Gear</a>
+				<a href="/webcam" class="btn btn-primary" role="button">Webcam</a>
 		</nav>
 	</header>
 	<section>
-		<div>
-			<div class="left narrow center">
-				<img src="/images/photo.png" height="50" width="50" />
-			</div>
+		<div class="center">
+			<a title="Nikon D7000" class="fancybox" rel="group"
+				href="/images/photos/nikon.jpg"><img
+				style="border: 2px solid black" src="/images/photos/nikon-tn.jpg"
+				alt="Nikon D7000" /></a>
 			<ul class="left narrow center">
 				<li><a
 					href="http://www.dpreview.com/products/nikon/slrs/nikon_d7000"
@@ -37,7 +47,7 @@
 				<li><a
 					href="http://www.bhphotovideo.com/c/product/728796-REG/Benbo_BEN106C_Benbo_Trekker_Mk3_Compact.html"
 					target="_blank">Benbo Trekker Mk 3 Compact Aluminum Tripod with
-						Ball Head</a></li>
+						Ball Head</a><br /></li>
 				<li><a href="https://wiki.gnome.org/Apps/Shotwell"
 					target="_blank">Shotwell</a>, <a
 					href="http://ufraw.sourceforge.net/" target="_blank">UFRaw</a>, <a
