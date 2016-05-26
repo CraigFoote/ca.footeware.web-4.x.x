@@ -1,4 +1,4 @@
-@CHARSET "UTF-8";
+@charset "UTF-8";
 
 @font-face {
 	font-family: "fmc";
@@ -8,11 +8,6 @@
 @font-face {
 	font-family: "decker";
 	src: url(../fonts/Decker.ttf) format("truetype");
-}
-
-* {
-	padding: 0;
-	margin: 0;
 }
 
 html, body {
@@ -25,14 +20,21 @@ body {
 	background-image: url("/images/limestone.jpg");
 }
 
-header>h1 {
+.title {
 	font-family: "fmc";
 	font-weight: 900;
-	font-size: 4em;
 	letter-spacing: 10px;
-	margin-left: 20px;
+	color: #999; /*fallback*/
 	color: rgba(9, 9, 9, 0.5);
-	text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+	text-shadow: 2px 2px 3px #808080;
+}
+
+header {
+	padding: 0 20px 0 20px;
+}
+
+h3 {
+	text-align: center;
 }
 
 header>nav {
@@ -46,6 +48,7 @@ section {
 }
 
 footer {
+	margin: 0 20px 0 20px;
 	padding: 10px;
 	border-top: 4px groove #999;
 	text-align: right;
@@ -53,7 +56,8 @@ footer {
 
 section>div {
 	font-family: "decker";
-	background-color: rgba(9, 9, 9, 0.5);
+	background-color: #888; /*fallback*/ 
+	background-color: rgba(8, 8, 8, 0.5);
 	color: #aaa;
 	font-size: 1.2em;
 	padding: 10px;
@@ -63,10 +67,9 @@ section>div {
 	border-bottom: 2px solid #ccc;
 	border-left: 2px solid #444;
 	border-radius: 8px;
-	border-top: 2px solid #444;
 }
 
-section>div ul{
+section>div ul {
 	padding: 5px 50px 5px 70px;
 }
 
