@@ -26,11 +26,15 @@ body {
 	letter-spacing: 10px;
 	color: #999; /*fallback*/
 	color: rgba(9, 9, 9, 0.5);
-	text-shadow: 2px 2px 3px #808080;
+	text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
 }
 
 header {
 	padding: 0 20px 0 20px;
+}
+
+.large{
+	font-size: 4em;
 }
 
 h3 {

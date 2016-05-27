@@ -16,18 +16,21 @@
 </head>
 <body>
 	<header>
-		<h1 class="title">Footeware</h1>
+		<h1 class="title large">Footeware</h1>
 		<nav>
-			<a href="/home" class="btn btn-primary" role="button">Home</a>
-			<a href="/photos" class="btn btn-primary" role="button">Photos</a>
-			<a href="/gear" class="btn btn-primary" role="button">Gear</a>
+			<a href="/home" class="btn btn-primary" role="button">Home</a> <a
+				href="/photos" class="btn btn-primary" role="button">Photos</a> <a
+				href="/gear" class="btn btn-primary" role="button">Gear</a> <a
+				href="/webcam" class="btn btn-primary" role="button">Webcam</a>
 		</nav>
 	</header>
 	<section>
 		<h3 class="title">Login</h3>
 		<div>
-			<div class="right narrower center" th:if="${param.error}">Invalid username and password.</div>
-			<div class="right narrower center" th:if="${param.logout}">You have been logged out.</div>
+			<div class="right narrower center" th:if="${param.error}">Invalid
+				username and password.</div>
+			<div class="right narrower center" th:if="${param.logout}">You
+				have been logged out.</div>
 			<div class="right narrower center" th:unless="${name}">
 				<form action="#" th:action="@{/login}" method="post">
 					<p>
