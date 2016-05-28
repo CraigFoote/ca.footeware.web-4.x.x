@@ -33,7 +33,7 @@ header {
 	padding: 0 20px 0 20px;
 }
 
-.large{
+.large {
 	font-size: 4em;
 }
 
@@ -60,7 +60,7 @@ footer {
 
 section>div {
 	font-family: "decker";
-	background-color: #888; /*fallback*/ 
+	background-color: #888; /*fallback*/
 	background-color: rgba(8, 8, 8, 0.5);
 	color: #aaa;
 	font-size: 1.2em;
@@ -78,7 +78,7 @@ section>div ul {
 }
 
 section>div a {
-	color: blue;
+	color: #99ccff;
 }
 
 section>div a:hover {
@@ -98,7 +98,7 @@ p {
 }
 
 .narrow {
-	width: 600px;
+	width: 700px;
 }
 
 .narrower {
@@ -130,4 +130,20 @@ p {
 
 .float-left {
 	float: left;
+}
+
+img.bordered{
+	border: 2px solid black;
+}
+
+#gearContainer {
+	width: 50%;
+	overflow: auto;
+	text-align: right;
+	float: left;
+}
+
+#gearList {
+	margin-left: 47%;
+	margin-top: 25px;
 }

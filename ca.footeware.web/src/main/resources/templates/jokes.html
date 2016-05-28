@@ -20,12 +20,18 @@
 				href="/photos" class="btn btn-primary" role="button">Photos</a> <a
 				href="/gear" class="btn btn-primary" role="button">Gear</a> <a
 				href="/webcam" class="btn btn-primary" role="button">Webcam</a> <a
-				href="jokes" class="btn btn-primary disabled" role="button">Jokes</a>
+				href="/jokes" class="btn btn-primary" role="button">Jokes</a>
 		</nav>
 	</header>
 	<section>
 		<h3 class="title">Jokes</h3>
-		<div>test</div>
+		<div>
+			<p th:if="${joke}" th:text="${joke}"></p>
+			<ol th:if="${titles}">
+				<li th:each="title : ${titles}"><a
+					th:href="@{'/jokes/' + ${title}}" th:text="${title}"></a></li>
+			</ol>
+		</div>
 	</section>
 	<footer>
 		<a href="mailto:craigfoote@gmail.com" class="btn btn-primary"
