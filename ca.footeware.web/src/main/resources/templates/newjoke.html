@@ -16,24 +16,31 @@
 	<header>
 		<h1 class="title large">Footeware</h1>
 		<nav>
-			<a href="/home" class="btn btn-primary" role="button">Home</a> <a
-				href="/photos" class="btn btn-primary" role="button">Photos</a> <a
+			<a href="/home" class="btn btn-primary" role="button">Home</a>
+			<a href="/photos" class="btn btn-primary" role="button">Photos</a> <a
 				href="/gear" class="btn btn-primary" role="button">Gear</a> <a
 				href="/webcam" class="btn btn-primary" role="button">Webcam</a> <a
 				href="/jokes" class="btn btn-primary" role="button">Jokes</a>
 		</nav>
 	</header>
 	<section>
-		<h3 class="title">Jokes</h3>
+		<h3 class="title">New Joke</h3>
 		<div>
-			<p th:if="${joke}" th:text="${joke}"></p>
-			<ol th:if="${titles}">
-				<li th:each="title : ${titles}"><a
-					th:href="@{'/jokes/' + ${title}}" th:text="${title}"></a></li>
-			</ol>
-			<p class="right">
-				<a href="/newjoke" class="btn btn-primary" role="button">New</a>
-			</p>
+			<div class="left narrow center" th:unless="${name}">
+				<form action="#" th:action="@{/jokes/new}" method="post">
+					<p>
+						Title: <input type="text" name="title" size="80" />
+					</p>
+					<p>
+						Body:
+						<textarea name="body" rows="15" cols="80" maxlength="1000"
+							spellcheck="true"></textarea>
+					</p>
+					<p class="right">
+						<input type="submit" class="btn btn-primary" value="Submit" />
+					</p>
+				</form>
+			</div>
 		</div>
 	</section>
 	<footer>

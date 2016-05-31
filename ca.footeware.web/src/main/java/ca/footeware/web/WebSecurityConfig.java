@@ -14,9 +14,10 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests()
-				.antMatchers("/", "/home", "/gear", "/webcam", "/jokes/**", "/styles/**", "/js/**", "/images/**", "/fonts/**")
+	protected void configure(HttpSecurity httpSecurity) throws Exception {
+		httpSecurity.authorizeRequests()
+				.antMatchers("/", "/home", "/gear", "/webcam", "/jokes/**", "/styles/**", "/js/**", "/images/**",
+						"/fonts/**")
 				.permitAll().anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll().and()
 				.logout().permitAll();
 	}
@@ -25,4 +26,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication().withUser("foote").password("bogie97").roles("USER");
 	}
+
 }

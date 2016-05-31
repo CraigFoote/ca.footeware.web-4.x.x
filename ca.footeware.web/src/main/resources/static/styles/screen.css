@@ -64,7 +64,7 @@ section>div {
 	background-color: rgba(8, 8, 8, 0.5);
 	color: #aaa;
 	font-size: 1.2em;
-	padding: 10px;
+	padding: 50px;
 	margin: 10px;
 	border-top: 2px solid #444;
 	border-right: 2px solid #ccc;
@@ -78,15 +78,15 @@ section>div ul {
 }
 
 section>div a {
-	color: #99ccff;
+	color: white;
 }
 
 section>div a:hover {
-	color: cyan;
+	color: white;
 }
 
 section>div a:visited {
-	color: cyan;
+	color: white;
 }
 
 img {
