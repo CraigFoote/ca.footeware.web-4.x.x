@@ -24,15 +24,26 @@
 		</nav>
 	</header>
 	<section>
-		<h3 class="title">Jokes</h3>
+		<h3 class="title">Add Joke</h3>
 		<div>
-			<ol th:if="${titles}">
-				<li th:each="title : ${titles}"><a
-					th:href="@{'/jokes/' + ${title}}" th:text="${title}"></a></li>
-			</ol>
-			<p class="right">
-				<a href="/addjoke" class="btn btn-primary" role="button">Add</a>
-			</p>
+			<div class="left narrow center" th:unless="${name}">
+				<p th:if="${error}" th:text="${error}" />
+				<form action="#" th:action="@{/jokes/add}" method="post">
+					<p>
+						Title: <input type="text" name="title" size="80"
+							required="required" autofocus="autofocus" th:value="${title}" />
+					</p>
+					<p>
+						Body:
+						<textarea name="body" rows="15" cols="80" maxlength="1000"
+							spellcheck="true" required="required" wrap="hard" th:text="${body}"></textarea>
+					</p>
+					<p class="right">
+						<a href="/jokes" class="btn btn-warning" role="button">Cancel</a>
+						<input type="submit" class="btn btn-primary" value="Submit" />
+					</p>
+				</form>
+			</div>
 		</div>
 	</section>
 	<footer>

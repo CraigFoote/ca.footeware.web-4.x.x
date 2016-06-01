@@ -59,19 +59,36 @@ public class JokesController {
 
 	@RequestMapping("/jokes/{title}")
 	public String getJoke(@PathVariable("title") String title, Model model) {
-		String joke = getMap().get(title);
-		model.addAttribute("joke", joke);
+		String body = getMap().get(title);
+		model.addAttribute("title", title);
+		model.addAttribute("body", body);
+		return "joke";
+	}
+
+	@RequestMapping(value = "/addjoke", method = RequestMethod.GET)
+	public String getAddJokePage(Model model) {
+		return "addjoke";
+	}
+
+	@RequestMapping(value = "/jokes/add", method = RequestMethod.POST)
+	public String postJoke(@RequestParam("title") String title, @RequestParam("body") String body, Model model) {
+		String existing = getMap().get(title);
+		if (existing != null) {
+			model.addAttribute("error", "A joke by that title exists. Please choose another.");
+			model.addAttribute("title", title);
+			model.addAttribute("body", body);
+			return "addjoke";
+		}
+		getMap().put(title, body);
+		getDB().commit();
+		Set<String> titles = getMap().keySet();
+		model.addAttribute("titles", titles);
 		return "jokes";
 	}
 
-	@RequestMapping(value = "/newjoke", method = RequestMethod.GET)
-	public String getNewJokePage(Model model) {
-		return "newjoke";
-	}
-
-	@RequestMapping(value = "/jokes/new", method = RequestMethod.POST)
-	public String putPage(@RequestParam("title") String title, @RequestParam("body") String body, Model model) {
-		getMap().put(title, body);
+	@RequestMapping(value = "/deletejoke/{title}", method = RequestMethod.GET)
+	public String deleteJoke(@PathVariable("title") String title, Model model) {
+		getMap().remove(title);
 		getDB().commit();
 		Set<String> titles = getMap().keySet();
 		model.addAttribute("titles", titles);
