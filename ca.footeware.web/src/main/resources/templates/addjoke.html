@@ -26,17 +26,17 @@
 	<section>
 		<h3 class="title">Add Joke</h3>
 		<div>
-			<div class="left narrow center" th:unless="${name}">
+			<div class="left center" th:unless="${name}">
 				<p th:if="${error}" th:text="${error}" />
 				<form action="#" th:action="@{/jokes/add}" method="post">
 					<p>
-						Title: <input type="text" name="title" size="80"
+						Title:<br /> <input id="title" type="text" name="title"
 							required="required" autofocus="autofocus" th:value="${title}" />
 					</p>
 					<p>
-						Body:
-						<textarea name="body" rows="15" cols="80" maxlength="1000"
-							spellcheck="true" required="required" wrap="hard" th:text="${body}"></textarea>
+						Body:<br />
+						<textarea id="body" name="body" rows="15" maxlength="1000"
+							spellcheck="true" required="required" th:text="${body}"></textarea>
 					</p>
 					<p class="right">
 						<a href="/jokes" class="btn btn-warning" role="button">Cancel</a>

@@ -147,3 +147,11 @@ img.bordered{
 	margin-left: 47%;
 	margin-top: 25px;
 }
+
+input#title{
+	width:100%;
+}
+
+textarea#body{
+	width:100%;
+}
