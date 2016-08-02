@@ -159,3 +159,7 @@ input#title{
 textarea#body{
 	width:100%;
 }
+
+#webcam{
+	width: 80%;
+}
