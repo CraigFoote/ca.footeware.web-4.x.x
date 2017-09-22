@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="ca.footeware.web/src/main/java"/>
+	<classpathentry kind="src" path="ca.footeware.web/src/test/java"/>
+	<classpathentry kind="lib" path="ca.footeware.web/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="ca.footeware.web/target/ca.footeware.web-4.0.0-SNAPSHOT.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="ca.footeware.web/target/classes"/>
+</classpath>
