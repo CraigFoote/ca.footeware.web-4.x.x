@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8"/>
+<title>Footeware.ca</title>
+<link rel="icon" type="image/png" href="/images/favicon.ico" />
+<link href="/styles/screen.css" rel="stylesheet" type='text/css' />
+<link rel="stylesheet" href="/styles/lightbox.css" />
+<link rel="stylesheet" href="/styles/jquery.fancybox.css" />
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous" />
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
+<script src="/js/jquery.fancybox.js"></script>
+<script>
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+</head>
+<body>
+	<h1>Head Fragment.</h1>
+</body>
+</html>

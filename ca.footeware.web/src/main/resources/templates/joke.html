@@ -1,34 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="UTF-8" />
-<title>Footeware.ca</title>
-<link rel="icon" type="image/png" href="/images/favicon.ico" />
-<link href="/styles/screen.css" rel="stylesheet" type='text/css' />
-<link
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous"/>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	crossorigin="anonymous"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	crossorigin="anonymous"></script>
+<head th:replace="fragments/head :: head">
 </head>
 <body>
-	<header>
-		<h1 class="title large">Footeware</h1>
-		<nav>
-			<a href="/home" class="btn btn-primary" role="button">Home</a>
-			<a href="/photos" class="btn btn-primary" role="button">Photos</a> <a
-				href="/gear" class="btn btn-primary" role="button">Gear</a> <a
-				href="/webcam" class="btn btn-primary" role="button">Webcam</a> <a
-				href="/jokes" class="btn btn-primary" role="button">Jokes</a>
-		</nav>
-	</header>
+	<header th:replace="fragments/header :: header"></header>
 	<section>
 		<h3 th:text="${title}" class="title"></h3>
 		<div>
@@ -40,9 +15,6 @@
 			</p>
 		</div>
 	</section>
-	<footer>
-		<a href="mailto:craigfoote@gmail.com" class="btn btn-primary"
-			role="button">Email</a>
-	</footer>
+	<footer th:replace="fragments/footer :: footer"></footer>
 </body>
 </html>
