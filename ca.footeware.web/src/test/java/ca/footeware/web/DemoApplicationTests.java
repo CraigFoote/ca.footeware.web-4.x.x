@@ -3,19 +3,25 @@
  *******************************************************************************/
 package ca.footeware.web;
 
+import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootConfiguration
-@WebAppConfiguration
+import ca.footeware.web.controllers.JokesController;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class DemoApplicationTests {
 
+	@Autowired
+	private JokesController controller;
+	
 	@Test
 	public void contextLoads() {
+		Assertions.assertThat(controller).isNotNull();
 	}
 
 }
