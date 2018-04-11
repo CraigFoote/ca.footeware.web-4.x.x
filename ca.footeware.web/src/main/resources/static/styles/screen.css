@@ -22,11 +22,10 @@ body {
 
 .title {
 	font-family: "fmc";
-	font-weight: 900;
+	font-weight: bolder;
 	letter-spacing: 10px;
 	color: #999; /*fallback*/
 	color: rgba(9, 9, 9, 0.5);
-	text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
 }
 
 header {
@@ -48,7 +47,7 @@ header>nav {
 }
 
 section {
-	margin: 30px 150px 30px 150px;
+	margin: 80px 150px 30px 150px;
 }
 
 footer {
@@ -132,7 +131,7 @@ p {
 	float: left;
 }
 
-img.bordered{
+img.bordered {
 	border: 2px solid black;
 }
 
@@ -143,7 +142,7 @@ img.bordered{
 	float: left;
 }
 
-#gearContainer img{
+#gearContainer img {
 	width: 90%;
 }
 
@@ -152,14 +151,14 @@ img.bordered{
 	margin-top: 25px;
 }
 
-input#title{
-	width:100%;
+input#title {
+	width: 100%;
 }
 
-textarea#body{
-	width:100%;
+textarea#body {
+	width: 100%;
 }
 
-#webcam{
+#webcam {
 	width: 80%;
 }

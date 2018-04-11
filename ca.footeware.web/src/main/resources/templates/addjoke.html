@@ -3,21 +3,40 @@
 <head th:replace="fragments/head :: head">
 </head>
 <body>
-	<header th:replace="fragments/header :: header"></header>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand title">Footeware</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/home">Home</a></li>
+					<li><a href="/photos">Photos</a></li>
+					<li><a href="/gear">Gear</a></li>
+					<li><a href="/webcam">Webcam</a></li>
+					<li class="active"><a href="/jokes">Jokes</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	<section>
-		<h3 class="title">Add Joke</h3>
 		<div>
 			<div class="left center" th:unless="${name}">
 				<p th:if="${error}" th:text="${error}" />
 				<form action="#" th:action="@{/jokes/add}" method="post">
 					<p>
-						Title:<br /> <input id="title" type="text" name="title"
-							required="required" autofocus="autofocus" th:value="${title}" />
+						<input id="title" class="form-control" style="background-color: cornsilk" type="text" name="title"
+							required="required" autofocus="autofocus" th:value="${title}" placeholder="Title"/>
 					</p>
 					<p>
-						Body:<br />
-						<textarea id="body" name="body" rows="15" maxlength="1000"
-							spellcheck="true" required="required" th:text="${body}"></textarea>
+						<textarea id="body" class="form-control" style="background-color: cornsilk" name="body" rows="15" maxlength="1000"
+							spellcheck="true" required="required" th:text="${body}" placeholder="Body"></textarea>
 					</p>
 					<p class="right">
 						<a href="/jokes" class="btn btn-warning" role="button">Cancel</a>

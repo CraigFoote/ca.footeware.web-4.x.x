@@ -3,7 +3,28 @@
 <head th:replace="fragments/head :: head">
 </head>
 <body>
-	<header th:replace="fragments/header :: header"></header>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand title">Footeware</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="/home">Home</a></li>
+					<li><a href="/photos">Photos</a></li>
+					<li><a href="/gear">Gear</a></li>
+					<li><a href="/webcam">Webcam</a></li>
+					<li class="active"><a href="/jokes">Jokes</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>	
 	<section>
 		<h3 th:text="${title}" class="title"></h3>
 		<div>
