@@ -3,7 +3,7 @@
 <head th:replace="fragments/head :: head">
 </head>
 <body>
-	<footer>
+	<footer th:fragment="footer">
 		<a href="https://github.com/CraigFoote/ca.footeware.web-4.x.x"
 			target="_blank"> <img alt="Open Source at Github"
 			src="/images/github.png" title="Open Source at Github" />
@@ -14,6 +14,32 @@
 			src="/images/bootstrap.png" alt="Made with BootStrap"
 			title="Made with BootStrap" /></a> <a href="mailto:craigfoote@gmail.com"
 			class="btn btn-primary" role="button">Email</a>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"
+			integrity="sha256-Tb4gdeCN/ACKmhKQ3BSfbuNgIVYQzBlEvbYlwK7juDw="
+			crossorigin="anonymous"></script>
+		<script type="text/javascript">
+		$.fancybox.defaults.idleTime = 30;
+		$.fancybox.defaults.loop = true;
+		$.fancybox.defaults.animationEffect = "zoom";
+		$.fancybox.defaults.transitionEffect = "circular";
+		$.fancybox.defaults.buttons = [
+	        "zoom",
+// 	        "share",
+	        "slideShow",
+	        "fullScreen",
+	        "download",
+	        "thumbs",
+	        "close"
+	    ];
+		</script>
 	</footer>
 </body>
 </html>
